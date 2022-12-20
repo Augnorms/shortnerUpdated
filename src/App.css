@@ -1,38 +1,1333 @@
-.App {
-  text-align: center;
+@media screen and (min-width:1000px){
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*Main body*/
+    body{
+        width: 100%;
+    }
+
+    .App{
+        width: 100%;
+        font-family: 'Poppins';
+    }
+
+    /*head*/
+
+    .head{
+        width:100%;
+        padding: 30px 100px 100px 100px;
+    }
+
+    .navigation{
+        width:100%;
+        display: flex;
+    }
+
+    .navigation .logo{
+        width: 12%;
+        padding-top: 16px;
+       
+    }
+    .navigation .logo .logo-img{
+        width: 100px;
+    }
+
+    .navigation .navlist{
+        width: 88%;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navigation .navlist .leftList{
+        display: inline-flex;
+    }
+
+    .navigation .navlist .leftList li{
+        width: 90px;
+        padding: 5px;
+        list-style: none;
+        text-align: center;
+    }
+
+    .navigation .navlist .leftList li a{
+        text-decoration: none;
+        color: #9e9aa8;
+    }
+
+    .navigation .navlist .leftList li a:hover{
+        color: #34313d;
+        font-weight: bold;
+    }
+
+    .navigation .navlist .rightList{
+        display: inline-flex;
+    }
+
+    .navigation .navlist .rightList li{
+        width:90px;
+        padding: 5px;
+        list-style: none;
+        text-align: center;
+    }
+
+    .navigation .navlist .rightList li a{
+        text-decoration: none;
+        color: #9e9aa8;
+    }
+
+    .navigation .navlist .rightList li a:hover{
+        color: #34313d;
+        font-weight: bold;
+    }
+
+    .active{
+        background: #2bd0d0;
+        border-radius: 19px;
+    }
+    .active a{
+        color: #ffffff !important;
+        font-weight: bold;
+    }
+
+    .active:hover{
+        background: #95E7E7;
+    }
+
+    .navigation .burga{
+        display:none
+    }
+   
+
+
+    .banner1{
+        width:100%;
+        margin: 50px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .banner1 .left{
+        padding: 0px;
+      
+    }
+    .banner1 .left .info h1{
+        font-size: 70px;
+        line-height: 74px;
+    }
+    .banner1 .left .info p{
+        font-size: 21px;
+        color:#9e9aa8;
+    }
+    .banner1 .left .getStarted{
+        text-align: center;
+        margin: 20px 0;
+        width:150px;
+        padding: 8px;
+        background: #2bd0d0;
+        border-radius: 20px;
+        
+    }
+    .banner1 .left .getStarted a{
+        color:#ffffff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .banner1 .left .getStarted:hover{
+        background: #95E7E7;
+    }
+
+    .banner1 .right img{  
+        position: relative;
+        top: 0;
+        left: 100px;
+    }
+
+    
+
+    .shortner{
+        width:100%;
+        padding: 30px 100px 130px 100px;
+        background: #e1e0e4;
+    }
+
+    .shortnerDiv{
+        width:100%;
+        position: relative;
+        bottom: 100px;
+        margin-bottom: -90px;
+    }
+
+    .shortnerDiv .shortInput{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        padding: 2px;
+        background-color: hsl(257, 27%, 26%);
+    }
+    .shortnerDiv .shortInput .tags{
+        width: 92%;
+        position: relative;
+        left: 40px;
+        bottom: 150px;
+    }
+    .shortnerDiv .shortInput .tags .inputTag{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    } 
+    .shortnerDiv .shortInput .tags .inputTag .input input{
+        width: 100%;
+        padding: 15px;
+        border-radius: 8px;
+        border: 3px solid #f28c28;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .shortnerDiv .shortInput .tags .inputTag .input input[type="text"]::placeholder{
+        color: #f28c28;
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .shortnerDiv .shortInput .tags .inputTag .input p{
+        color: #f28c28;
+        margin-top: 4px;
+        font-style: italic;
+    }
+
+    .shortnerDiv .shortInput .tags .inputTag .btnTag{ 
+        display: flex;
+        justify-content: center;
+    } 
+    .shortnerDiv .shortInput .tags .inputTag .btnTag button{
+        width: 80%;
+        height: 58px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #2bd0d0;
+        border: 2px solid #2bd0d0;
+    }
+    .shortnerDiv .shortInput .tags .btnTag button:hover{
+        background: #95E7E7;
+    }
+
+    .shortner .shortner-list-container{
+        width: 100%;
+        margin: 5px 0 30px 0;
+        
+    }
+    .shortner .shortner-list-container .shortner-list-div{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr 2fr 1fr; 
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 8px;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list1{
+        padding: 5px;
+        color: #000000;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list2{
+        display: flex;
+        justify-content: end;
+        padding: 5px;
+        color: #2bd0d0;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list-btn{
+       display: flex;
+       justify-content: center;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list-btn button{
+        padding: 10px;
+        width: 100px;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #2bd0d0;
+        border: 2px solid #2bd0d0;
+        color: #ffffff;
+        font-size: 16px;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list-btn button:hover{
+        background: #95E7E7;
+        cursor: pointer;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list-click button{
+        padding: 10px;
+        width: 100px;
+        margin-left: 20px;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #000000;
+        border: 2px solid #000000;
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+    .advanceStats{
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 150px;
+    }
+
+    .advanceStats .headingtxt{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .advanceStats .paratxt{
+        width: 100%;
+        text-align: center;
+        color: #9e9aa8;
+    }
+
+    .cards{
+        width: 100%;
+        padding: 10px 0 10px 0;
+    }
+    .cards .horizon-line{
+        padding: 3px;
+        background: #2bd0d0;
+    }
+    .cards .box-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
+        bottom: 120px;
+        margin-bottom: -120px;
+    }
+    .cards .box-container .vert-div{
+       display: none;
+    }
+    .cards .box-container .box1{
+        background: #ffffff;
+        padding: 30px;
+        margin-right: 40px;
+        border-radius: 8px;
+        box-shadow: 6px 6px 6px rgba(0,0,0,0.1);
+    }
+    .cards .box-container .box1 .img-container{
+        position: relative;
+        bottom: 60px;
+        margin-bottom: -40px;
+    }
+    .cards .box-container .box1 .img-container .img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: hsl(270, 3%, 26%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards .box-container .box1 .img-container .img img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .cards .box-container .box1 .box-body h4{
+        margin-bottom: 20px;
+    }
+
+    .cards .box-container .box1 .box-body p{
+        font-size: 14px;
+        color: #9e9aa8;
+    }
+
+
+
+    .cards .box-container .box2{
+        background: #ffffff;
+        padding: 30px;
+        margin-right: 40px;
+        border-radius: 8px;
+        box-shadow: 6px 6px 6px rgba(0,0,0,0.1);
+        position: relative;
+        top: 25px;
+        
+    }
+    .cards .box-container .box2 .img-container{
+        position: relative;
+        bottom: 60px;
+        margin-bottom: -40px;
+    }
+    .cards .box-container .box2 .img-container .img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: hsl(270, 3%, 26%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards .box-container .box2 .img-container .img img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .cards .box-container .box2 .box-body h4{
+        margin-bottom: 20px;
+    }
+
+    .cards .box-container .box2 .box-body p{
+        font-size: 14px;
+        color: #9e9aa8;
+    } 
+
+    .cards .box-container .box3{
+        background: #ffffff;
+        padding: 30px;
+        margin-right: 0px;
+        border-radius: 8px;
+        box-shadow: 6px 6px 6px rgba(0,0,0,0.1);
+        position: relative;
+        top: 50px;
+    }
+    .cards .box-container .box3 .img-container{
+        position: relative;
+        bottom: 60px;
+        margin-bottom: -40px;
+    }
+    .cards .box-container .box3 .img-container .img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: hsl(270, 3%, 26%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards .box-container .box3 .img-container .img img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .cards .box-container .box3 .box-body h4{
+        margin-bottom: 20px;
+    }
+
+    .cards .box-container .box3 .box-body p{
+        font-size: 14px;
+        color: #9e9aa8;
+    } 
+
+
+    
+    .boostsection{
+        width:100%;
+        height: 100%;
+        background: hsl(257, 27%, 26%);
+        position: relative;
+    }
+    .boostsection .descript{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 70px;
+    }
+    .boostsection .descript .textDiv .title{
+        margin-bottom: 20px;
+    }
+    .boostsection .descript .textDiv .title h1{
+        color: #ffffff;
+    }
+    .boostsection .descript .textDiv .btnDiv{
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+    }
+    .boostsection .descript .textDiv .btnDiv .btn{
+        width: 160px;
+        background: #2bd0d0;
+        text-align: center;
+        padding: 10px;
+        border-radius: 25px;
+    }
+    .boostsection .descript .textDiv .btnDiv .btn a{
+        text-decoration: none;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    .boostsection .descript .textDiv .btnDiv .btn:hover{
+        background: #95E7E7;
+        cursor: pointer;
+    }
+
+    .footer{
+        width:100%;
+        padding: 20px 10px 60px 10px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        background: #000000;
+    }
+
+    .footer .logo{
+        display: flex;
+        justify-content: center;
+        padding: 30px 10px 30px 10px;
+    } 
+    .footer .logo h3{
+        font-size: 28px;
+        color: #ffffff;
+    }
+
+    .footer .info{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 30px 10px 30px 10px;
+    }
+    .footer .info .features h3{
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+    .footer .info .features li{
+        list-style: none;
+    }
+    .footer .info .features a{
+        color: #9e9aa8;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .footer .info .features a:hover{
+        color: #2bd0d0;
+        font-weight: bold;
+    }
+
+    .footer .info .resources h3{
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+    .footer .info .resources li{
+        list-style: none;
+    }
+    .footer .info .resources a{
+        color: #9e9aa8;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .footer ,.info .resources a:hover{
+        color: #2bd0d0;
+        font-weight: bold;
+    }
+
+    .footer .info .company h3{
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+    .footer .info .company li{
+        list-style: none;
+    }
+    .footer .info .company a{
+        color: #9e9aa8;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .footer .info .company a:hover{
+        color: #2bd0d0;
+        font-weight: bold;
+    }
+
+    .media{
+        padding: 30px 10px 30px 10px;
+    }
+    .media a{
+        font-size: 25px;
+        margin-right: 30px;
+        color: #ffffff;
+    }
+    .media a:hover{
+        color: #2bd0d0;
+    }
+
+}/* main media query break point */
+
+
+/* ----------------------------------------- */
+
+
+@media screen and (max-width:999px) and (min-width:100px){
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+    body{
+        width: 100%;
+    }
+
+    .App{
+        width: 100%;
+        font-family: 'Poppins';
+    }
+
+    .head{
+        width:100%;
+        padding: 20px 40px 40px 40px;
+    }
+
+    .navigation{
+        width:100%;
+        display: flex;
+    }
+
+    .navigation .logo{
+        width: 20%;
+        padding-top: 16px;
+    }
+
+    .navigation .logo .logo-img{
+        width: 100px;
+    }
+
+
+    .navigation .navlist{
+        width: 60%;
+        padding: 40px 30px 30px 30px;
+        position: absolute;
+        top: 90px;
+        left: 40px;
+        background: #34313d;
+        border-radius: 10px;
+        z-index: 2;
+        display: none;
+    }
+
+    .navigation.expanded .navlist{
+        
+        display: block;
+    }
+    
+    .navigation .navlist .leftList{
+        width: 100%;
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+    .navigation .navlist .leftList li{
+        width: 100%;
+        padding: 15px;
+        list-style: none;
+
+    }
+    .navigation .navlist .leftList li a{
+        text-decoration: none;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+
+    .navigation .navlist .rightList{
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .navigation .navlist .rightList li{
+        width: 100%;
+        padding: 10px;
+        list-style: none;
+
+    }
+    .navigation .navlist .rightList li a{
+        text-decoration: none;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    .navigation .navlist .rightList .active{
+        background: #2bd0d0;
+        border-radius: 20px;
+    }
+
+
+    .navigation .burga{
+       width: 80%;
+       padding-top: 14px;
+       display: flex;
+       justify-content: end;
+       
+    }
+    .navigation .burga i{
+        font-size: 30px;
+        color: #9e9aa8;
+    }
+   
+
+   
+
+    .banner1{
+        width:100%;
+        margin: 50px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .banner1 .left{
+        order: 2;
+        padding: 20px 0 30px 0;
+        
+    }
+    .banner1 .left .info{
+        width:100%;
+        text-align: center;
+    }
+    .banner1 .left .info h1{
+        line-height: 35px;
+    
+    }
+    .banner1 .left .info .pDiv{
+        margin-top: 10px;
+        color: #9e9aa8;
+    }
+
+    .banner1 .left .getStarted{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .banner1 .left .getStarted .anchor{
+        width:150px;
+        background: #2bd0d0;
+        padding: 10px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .banner1 .left .getStarted .anchor a{
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .banner1 .left .getStarted .anchor:hover{
+        background: #95E7E7;
+    }
+
+    .banner1 .right{
+        margin: 0px;
+        order: 1;
+        padding: 30px 0 30px 0;
+        display: flex;
+        justify-content: center;
+       
+    }
+
+    .banner1 .right img{
+        width: 500px;
+        height: 260px;
+    }
+
+
+
+    .shortner{
+        width:100%;
+        padding: 30px 100px 110px 100px;
+        background: #e1e0e4;
+    }
+
+    .shortnerDiv{
+        width:100%;
+        position: relative;
+        bottom: 100px;
+        margin-bottom: -90px;
+    }
+
+    .shortnerDiv .shortInput{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        padding: 2px;
+        background-color: hsl(257, 27%, 26%);
+    }
+    .shortnerDiv .shortInput .tags{
+        width: 92%;
+        position: relative;
+        left: 28px;
+        bottom: 155px;
+    }
+    .shortnerDiv .shortInput .tags .inputTag{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+    .shortnerDiv .shortInput .tags .inputTag .input{
+        margin-bottom: 10px;
+    }
+    .shortnerDiv .shortInput .tags .inputTag .input input{
+        width: 100%;
+        padding: 15px;
+        border-radius: 8px;
+        border: 3px solid #f28c28;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .shortnerDiv .shortInput .tags .inputTag .input input[type="text"]::placeholder{
+        color: #f28c28;
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .shortnerDiv .shortInput .tags .inputTag .input p{
+        color: #f28c28;
+        margin-top: 4px;
+        font-style: italic;
+        display: none;
+    }
+
+    .shortnerDiv .shortInput .tags .inputTag .btnTag{ 
+        display: flex;
+        justify-content: center;
+    } 
+    .shortnerDiv .shortInput .tags .inputTag .btnTag button{
+        width: 100%;
+        height: 58px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #2bd0d0;
+        border: 2px solid #2bd0d0;
+    }
+    .shortnerDiv .shortInput .tags .btnTag button:hover{
+        background: #95E7E7;
+    }
+
+    .shortner .shortner-list-container{
+        width: 100%;
+        margin: 5px 0 30px 0;
+        
+    }
+    .shortner .shortner-list-container .shortner-list-div{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr; 
+        padding: 10px 10px 10px 10px;
+        background-color: #ffffff;
+        border-radius: 8px;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list1{
+        margin-bottom: 10px;
+        color: #000000;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list2{
+        color: #2bd0d0;
+        margin-bottom: 10px;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list-btn{
+       display: flex;
+       justify-content: center;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list-btn button{
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #2bd0d0;
+        border: 2px solid #2bd0d0;
+        color: #ffffff;
+        font-size: 16px;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list-btn button:hover{
+        background: #95E7E7;
+        cursor: pointer;
+    }
+    .shortner .shortner-list-container .shortner-list-div .list-click button{
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #000000;
+        border: 2px solid #000000;
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+
+
+    .advanceStats{
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 190px;
+    }
+
+    .advanceStats .headingtxt{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        
+    }
+    .advanceStats .headingtxt h1{
+        font-size: 40px;
+    }
+    .advanceStats .paratxt{
+        width: 100%;
+        text-align: center;
+        color: #9e9aa8;
+    }
+    .advanceStats .paratxt p{
+        font-size: 16px;
+    }
+
+
+    .cards{
+        width: 100%;
+        padding: 10px 0 10px 0;
+    }
+    .cards .horizon-line{
+        padding: 3px;
+        background: #2bd0d0;
+        display: none;
+    }
+   
+    .cards .box-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        position: relative;
+        bottom: 120px;
+        margin-bottom: -120px;
+    }
+
+    .cards .box-container .vert-div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cards .box-container .vert-line{
+        width: 4px;
+        height: 80px;
+        border: 4px solid #2bd0d0;
+    }
+
+    .cards .box-container .box1{
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 6px 6px 6px rgba(0,0,0,0.1);
+        margin-bottom: 0px;
+
+    }
+    .cards .box-container .box1 .img-container{
+        position: relative;
+        bottom: 60px;
+        margin-bottom: -40px;
+        display: flex;
+        justify-content: center;
+    }
+    .cards .box-container .box1 .img-container .img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: hsl(270, 3%, 26%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards .box-container .box1 .img-container .img img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .cards .box-container .box1 .box-body{
+        text-align: center;
+    }
+    .cards .box-container .box1 .box-body h4{
+        margin-bottom: 20px;
+    }
+
+    .cards .box-container .box1 .box-body p{
+        font-size: 14px;
+        color: #9e9aa8;
+    }
+
+
+
+    .cards .box-container .box2{
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 6px 6px 6px rgba(0,0,0,0.1);
+        margin-bottom: 0px; 
+    }
+    .cards .box-container .box2 .img-container{
+        position: relative;
+        bottom: 60px;
+        margin-bottom: -40px;
+        display: flex;
+        justify-content: center;
+    }
+    .cards .box-container .box2 .img-container .img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: hsl(270, 3%, 26%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards .box-container .box2 .img-container .img img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .cards .box-container .box2 .box-body{
+        text-align: center;
+    }
+    .cards .box-container .box2 .box-body h4{
+        margin-bottom: 20px;
+    }
+
+    .cards .box-container .box2 .box-body p{
+        font-size: 14px;
+        color: #9e9aa8;
+    } 
+
+    .cards .box-container .box3{
+        background: #ffffff;
+        padding: 30px;
+        margin-right: 0px;
+        border-radius: 8px;
+        box-shadow: 6px 6px 6px rgba(0,0,0,0.1);
+    }
+    .cards .box-container .box3 .img-container{
+        position: relative;
+        bottom: 60px;
+        margin-bottom: -40px;
+        display: flex;
+        justify-content: center;
+    }
+    .cards .box-container .box3 .img-container .img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: hsl(270, 3%, 26%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards .box-container .box3 .img-container .img img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .cards .box-container .box3 .box-body{
+        text-align: center;
+    }
+
+    .cards .box-container .box3 .box-body h4{
+        margin-bottom: 20px;
+    }
+
+    .cards .box-container .box3 .box-body p{
+        font-size: 14px;
+        color: #9e9aa8;
+    } 
+
+
+    .boostsection{
+        width:100%;
+        height: 300px;
+        background: hsl(257, 27%, 26%);
+        position: relative;
+    }
+    .boostsection .descript{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 100px;
+    }
+    .boostsection .descript .textDiv .title{
+        margin-bottom: 20px;
+    }
+    .boostsection .descript .textDiv .title h1{
+        color: #ffffff;
+        font-size: 25px;
+    }
+    .boostsection .descript .textDiv .btnDiv{
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+    }
+    .boostsection .descript .textDiv .btnDiv .btn{
+        width: 160px;
+        background: #2bd0d0;
+        text-align: center;
+        padding: 10px;
+        border-radius: 25px;
+    }
+    .boostsection .descript .textDiv .btnDiv .btn a{
+        text-decoration: none;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    .boostsection .descript .textDiv .btnDiv .btn:hover{
+        background: #95E7E7;
+        cursor: pointer;
+    }
+
+
+    .footer{
+        width:100%;
+        padding: 20px 10px 60px 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        background: #000000;
+    }
+
+    .footer .logo{
+        display: flex;
+        justify-content: center;
+        padding: 30px 10px 30px 10px;
+    } 
+    .footer .logo h3{
+        font-size: 28px;
+        color: #ffffff;
+    }
+
+    .footer .info{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 30px 10px 30px 10px;
+        text-align: center;
+    }
+    .footer .info .features h3{
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+    .footer .info .features li{
+        list-style: none;
+        margin: 20px 0 0 20px;
+    }
+    .footer .info .features a{
+        color: #9e9aa8;
+        text-decoration: none;
+        font-size: 18px;
+        
+    }
+    .footer .info .features a:hover{
+        color: #2bd0d0;
+        font-weight: bold;
+    }
+
+    .footer .info .resources h3{
+        color: #ffffff;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    .footer .info .resources li{
+        list-style: none;
+        margin: 20px 0 0 20px;
+    }
+    .footer .info .resources a{
+        color: #9e9aa8;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .footer ,.info .resources a:hover{
+        color: #2bd0d0;
+        font-weight: bold;
+    }
+
+    .footer .info .company h3{
+        color: #ffffff;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    .footer .info .company li{
+        list-style: none;
+        margin: 20px 0 0 20px;
+    }
+    .footer .info .company a{
+        color: #9e9aa8;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .footer .info .company a:hover{
+        color: #2bd0d0;
+        font-weight: bold;
+    }
+
+    .media{
+        padding: 30px 10px 30px 10px;
+        text-align: center;
+    }
+    .media a{
+        font-size: 30px;
+        margin-right: 30px;
+        color: #ffffff;
+    }
+    .media a:hover{
+        color: #2bd0d0;
+    }
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/*------------------------------------------------------------------------*/
+
+
+@media screen and (max-width:768px){
+
+    .navigation .navlist{
+        width: 90%;
+        padding: 40px 30px 30px 30px;
+        position: absolute;
+        top: 90px;
+        left: 40px;
+        background: #34313d;
+        border-radius: 10px;
+        z-index: 2;
+    }
+
+    .banner1 .right img{
+        position: relative;
+        left: 80px;
+        width: 400px;
+        height: 260px;
+    }
+
+    .boostsection .descript{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 80px;
+    } 
+
+
+   
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*------------------------------------------------------------------------*/
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width:500px){
+
+    .head{
+        width:100%;
+        padding: 20px 20px 40px 20px;
+    }
+
+    .navigation .navlist{
+        width: 80%;
+        padding: 40px 30px 30px 30px;
+        position: absolute;
+        top: 90px;
+        left: 40px;
+        background: #34313d;
+        border-radius: 10px;
+        z-index: 2;
+    }
+
+    .banner1 .right img{
+        position: relative;
+        left: 50px;
+        width: 270px;
+        height: 260px;
+    }
+
+
+    .shortner{
+        width:100%;
+        padding: 30px 20px 30px 20px;
+        background: #e1e0e4;
+    }
+
+    .shortnerDiv{
+        width:100%;
+        position: relative;
+        bottom: 100px;
+        margin-bottom: -60px;
+    }
+
+    .shortnerDiv .shortInput{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        padding: 2px;
+        background-color: hsl(257, 27%, 26%);
+    }
+    .shortnerDiv .shortInput .tags{
+        width: 82%;
+        position: relative;
+        left: 35px;
+        bottom: 158px;
+    }
+    .shortnerDiv .shortInput .tags .inputTag{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+    .shortnerDiv .shortInput .tags .inputTag .input{
+        margin-bottom: 10px;
+    }
+    .shortnerDiv .shortInput .tags .inputTag .input input{
+        width: 100%;
+        padding: 15px;
+        border-radius: 8px;
+        border: 3px solid #f28c28;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .shortnerDiv .shortInput .tags .inputTag .input input[type="text"]::placeholder{
+        color: #f28c28;
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .shortnerDiv .shortInput .tags .inputTag .input p{
+        color: #f28c28;
+        margin-top: 4px;
+        font-style: italic;
+        display: none;
+    }
+
+    .shortnerDiv .shortInput .tags .inputTag .btnTag{ 
+        display: flex;
+        justify-content: center;
+    } 
+    .shortnerDiv .shortInput .tags .inputTag .btnTag button{
+        width: 100%;
+        height: 58px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #2bd0d0;
+        border: 2px solid #2bd0d0;
+    }
+    .shortnerDiv .shortInput .tags .btnTag button:hover{
+        background: #95E7E7;
+    }
+
+    .boostsection .descript{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 85px;
+    } 
+
+   
 }
