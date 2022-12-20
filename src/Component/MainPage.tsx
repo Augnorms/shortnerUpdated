@@ -90,7 +90,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
        <div className={!expand ? 'navigation' : 'navigation expanded'}>
 
           <div className='logo'>
-            <img src="./UrlShortner/images/logo.svg" alt="logo-image" className='logo-img'/>
+            <img src="./images/logo.svg" alt="logo-image" className='logo-img'/>
           </div>
 
          
@@ -143,7 +143,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
           </div>
 
           <div className="right">
-             <img src="./UrlShortner/images/illustration-working.svg" alt="worker-img"/>
+             <img src="./images/illustration-working.svg" alt="worker-img"/>
           </div>
 
        </div>
@@ -156,7 +156,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
           <div className='shortInput'>
 
-            <img src="./UrlShortner/images/bg-shorten-desktop.svg" alt="image"/>
+            <img src="./images/bg-shorten-desktop.svg" alt="image"/>
 
             <div className='tags'>
 
@@ -225,7 +225,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
                   <div className='img'>
 
-                     <img src="./UrlShortner/images/icon-brand-recognition.svg"/>
+                     <img src="./images/icon-brand-recognition.svg"/>
 
                   </div>
 
@@ -252,7 +252,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
                   <div className='img'>
 
-                     <img src="./UrlShortner/images/icon-detailed-records.svg"/>
+                     <img src="./images/icon-detailed-records.svg"/>
 
                   </div>
 
@@ -279,7 +279,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
                   <div className='img'>
 
-                     <img src="./UrlShortner/images/icon-fully-customizable.svg"/>
+                     <img src="./images/icon-fully-customizable.svg"/>
 
                   </div>
 
@@ -305,7 +305,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
    <div className='boostsection'>
 
-      <img src="./UrlShortner/images/bg-boost-desktop.svg" alt="img"/>
+      <img src="./images/bg-boost-desktop.svg" alt="img"/>
 
       <div className='descript'>
 
