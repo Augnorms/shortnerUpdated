@@ -230,27 +230,33 @@
     }
     .shortner .shortner-list-container .shortner-list-div{
         width: 100%;
+        padding: 0px;
+       
+    }
+    .shortner .shortner-list-container .shortner-list-div .listings{
+        width: 100%;
+        padding: 10px;
         display: grid;
         grid-template-columns: 3fr 2fr 1fr; 
-        padding: 10px;
         background-color: #ffffff;
         border-radius: 8px;
+        margin: 10px 0 10px 0;
     }
-    .shortner .shortner-list-container .shortner-list-div .list1{
+    .shortner .shortner-list-container .shortner-list-div .listings .list1{
         padding: 5px;
         color: #000000;
     }
-    .shortner .shortner-list-container .shortner-list-div .list2{
+    .shortner .shortner-list-container .shortner-list-div .listings .list2{
         display: flex;
         justify-content: end;
         padding: 5px;
         color: #2bd0d0;
     }
-    .shortner .shortner-list-container .shortner-list-div .list-btn{
+    .shortner .shortner-list-container .shortner-list-div .listings .list-btn{
        display: flex;
        justify-content: center;
     }
-    .shortner .shortner-list-container .shortner-list-div .list-btn button{
+    .shortner .shortner-list-container .shortner-list-div .listings .list-btn .button{
         padding: 10px;
         width: 100px;
         border-radius: 5px;
@@ -260,21 +266,22 @@
         color: #ffffff;
         font-size: 16px;
     }
-    .shortner .shortner-list-container .shortner-list-div .list-btn button:hover{
+    .shortner .shortner-list-container .shortner-list-div .listings .list-btn button:hover{
         background: #95E7E7;
         cursor: pointer;
     }
-    .shortner .shortner-list-container .shortner-list-div .list-click button{
+
+    .shortner .shortner-list-container .shortner-list-div .listings .list-btn .button1{
         padding: 10px;
         width: 100px;
-        margin-left: 20px;
         border-radius: 5px;
         text-align: center;
-        background-color: #000000;
-        border: 2px solid #000000;
+        background-color: #000000 !important;
+        border: 2px solid #000000 !important;
         color: #ffffff;
         font-size: 16px;
     }
+   
 
     .advanceStats{
         width: 100%;
@@ -747,7 +754,7 @@
         width:100%;
         position: relative;
         bottom: 100px;
-        margin-bottom: -90px;
+        margin-bottom: -100px;
     }
 
     .shortnerDiv .shortInput{
@@ -817,25 +824,31 @@
     }
     .shortner .shortner-list-container .shortner-list-div{
         width: 100%;
+        padding: 0px;
+       
+    }
+    .shortner .shortner-list-container .shortner-list-div .listings{
+        width: 100%;
+        padding: 10px;
         display: grid;
         grid-template-columns: 1fr; 
-        padding: 10px 10px 10px 10px;
         background-color: #ffffff;
         border-radius: 8px;
+        margin: 0px 0 10px 0;
     }
-    .shortner .shortner-list-container .shortner-list-div .list1{
+    .shortner .shortner-list-container .shortner-list-div .listings .list1{
         margin-bottom: 10px;
         color: #000000;
     }
-    .shortner .shortner-list-container .shortner-list-div .list2{
+    .shortner .shortner-list-container .shortner-list-div .listings .list2{
         color: #2bd0d0;
         margin-bottom: 10px;
     }
-    .shortner .shortner-list-container .shortner-list-div .list-btn{
+    .shortner .shortner-list-container .shortner-list-div .listings .list-btn{
        display: flex;
        justify-content: center;
     }
-    .shortner .shortner-list-container .shortner-list-div .list-btn button{
+    .shortner .shortner-list-container .shortner-list-div .listings .list-btn .button{
         padding: 10px;
         width: 100%;
         border-radius: 5px;
@@ -845,17 +858,18 @@
         color: #ffffff;
         font-size: 16px;
     }
-    .shortner .shortner-list-container .shortner-list-div .list-btn button:hover{
+    .shortner .shortner-list-container .shortner-list-div .listings .list-btn button:hover{
         background: #95E7E7;
         cursor: pointer;
     }
-    .shortner .shortner-list-container .shortner-list-div .list-click button{
+
+    .shortner .shortner-list-container .shortner-list-div .listings .list-btn .button1{
         padding: 10px;
         width: 100%;
         border-radius: 5px;
         text-align: center;
-        background-color: #000000;
-        border: 2px solid #000000;
+        background-color: #000000 !important;
+        border: 2px solid #000000 !important;
         color: #ffffff;
         font-size: 16px;
     }

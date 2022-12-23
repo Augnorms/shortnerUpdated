@@ -1,35 +1,46 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import axios from 'axios'
 import { JsxEmit } from 'typescript'
 
 
-//https://api.shrtco.de/v2/shorten?url=
+const getLocalStorage = ()=>{
+   let allData = localStorage.getItem("data")
 
-export type Objects = {
-   code:'string',
-   full_share_link:'string',
-   full_short_link:'string', 
-   full_short_link2:'string',
-   full_short_link3:'string',
-   original_link:'string',
-   share_link:'string',
-   short_link:'string',
-   short_link2:'string',
-   short_link3:'string'
+   if(allData){
+
+      return JSON.parse(localStorage.getItem("data") || "")
+
+   }else{
+
+      return []
+      
+   }
+}
+
+type DataApi = {
+   original_link:string, 
+   full_short_link2:string,
+   code:string
 }
 
 function MainPage() {
- /* for handling menu bar at mobile view*/ 
+
+ /*ref for button*/
+ const ref = useRef(null)
+
+/* array to save the url data */
+const [data, setData] = useState<DataApi[]>(getLocalStorage())
+
+/* for handling menu bar at mobile view*/ 
 const [expand, setExpand] = useState<boolean>(false)
 
 /* for handling shortner */
 const [text, setText] = useState<string>("")
 
-/* array to save the url data */
-const [data, setData] = useState<Objects | null>(null)
-
 /* for handling copy to clipboard */
-const [copy, setCopy] = useState<boolean>(false)
+
+const [state, setState] = useState<boolean>(false)
+const [clickbutton, setClickbutton] = useState<string>("")
 
 let HandleClick = (event: React.MouseEvent<HTMLDivElement>)=>{
       if(expand === false){
@@ -56,10 +67,15 @@ let HandleSubmit = (event: React.FormEvent<HTMLFormElement>)=>{
    }else{
 
       axios.get(`https://api.shrtco.de/v2/shorten?url=${text}`).then((res)=>{
-
-          let result = res.data.result
           
-          setData(result)
+          setData(prevData =>[
+            ...prevData, 
+            {
+               original_link: res.data.result.original_link, 
+               full_short_link2: res.data.result.full_short_link2,
+               code: res.data.result.code
+            }
+          ])
 
       }).catch(error=>console.error(`Error: ${error}`))
 
@@ -69,20 +85,22 @@ let HandleSubmit = (event: React.FormEvent<HTMLFormElement>)=>{
 
 }
 
-let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
+let HandleClipboard = (event:React.MouseEvent<HTMLButtonElement>)=>{
 
-   navigator.clipboard.writeText(data === null ? "" : data.full_short_link2)
-
-   if(copy === false){
-      setCopy(true)
-   }
-
+      navigator.clipboard.writeText(event.currentTarget.value)
+      setState(true)
+      setClickbutton(event.currentTarget.id)
+      
 }
 
 
+useEffect(()=>{
 
-// console.log(text)
-// console.log(data)
+ localStorage.setItem("data", JSON.stringify(data))
+
+}, [data])
+
+
   return (
     <>
     <div className='head'>
@@ -90,7 +108,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
        <div className={!expand ? 'navigation' : 'navigation expanded'}>
 
           <div className='logo'>
-            <img src="./images/logo.svg" alt="logo-image" className='logo-img'/>
+            <img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="logo-image" className='logo-img'/>
           </div>
 
          
@@ -143,7 +161,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
           </div>
 
           <div className="right">
-             <img src="./images/illustration-working.svg" alt="worker-img"/>
+             <img src={process.env.PUBLIC_URL + "/images/illustration-working.svg"} alt="worker-img"/>
           </div>
 
        </div>
@@ -156,7 +174,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
           <div className='shortInput'>
 
-            <img src="./images/bg-shorten-desktop.svg" alt="image"/>
+            <img src={process.env.PUBLIC_URL + "/images/bg-shorten-desktop.svg"} alt="image"/>
 
             <div className='tags'>
 
@@ -187,16 +205,28 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
        <div className='shortner-list-container'>
             
-       {
-         data === null ? <div></div> :
               <div className="shortner-list-div">
-                     <div className="list1">{data === null ? null : data.original_link}</div>
-                     <div className="list2">{data === null ? null : data.full_short_link2}</div>
-                     <div className={copy === false ? "list-btn" : "list-click"}>
-                        <button onClick={HandleClipboard}>{copy === false ? "copy" : "Copied!"}</button>     
-                     </div>
-              </div> 
-       }      
+               {
+                  data.map((x=>{
+                     return(
+                        <div className='listings' key={x.code}>
+                           <div className="list1">{x.original_link}</div>
+                           <div className="list2">{x.full_short_link2}</div>
+
+                           <div key={x.code} className={"list-btn"}>
+                           <button onClick={HandleClipboard} key={x.code} id={x.code} value={x.full_short_link2}
+                           className={state == true && x.code == clickbutton ? "button1" : "button"}>
+                              {state == true && x.code == clickbutton ? "Copied!" : "copy"}
+                              </button>     
+                           </div>
+                        </div>
+                     )
+                  }))
+                     
+               }
+                     
+                     
+              </div>      
             
          </div>
 
@@ -225,7 +255,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
                   <div className='img'>
 
-                     <img src="./images/icon-brand-recognition.svg"/>
+                     <img src={process.env.PUBLIC_URL + "/images/icon-brand-recognition.svg"}/>
 
                   </div>
 
@@ -252,7 +282,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
                   <div className='img'>
 
-                     <img src="./images/icon-detailed-records.svg"/>
+                     <img src={process.env.PUBLIC_URL + "/images/icon-detailed-records.svg"} />
 
                   </div>
 
@@ -279,7 +309,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
                   <div className='img'>
 
-                     <img src="./images/icon-fully-customizable.svg"/>
+                     <img src={process.env.PUBLIC_URL + "/images/icon-fully-customizable.svg"}/>
 
                   </div>
 
@@ -305,7 +335,7 @@ let HandleClipboard = (event: React.MouseEvent<HTMLButtonElement>)=>{
 
    <div className='boostsection'>
 
-      <img src="./images/bg-boost-desktop.svg" alt="img"/>
+      <img src={process.env.PUBLIC_URL + "/images/bg-boost-desktop.svg"} alt="img"/>
 
       <div className='descript'>
 
